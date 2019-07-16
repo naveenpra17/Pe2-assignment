@@ -18,17 +18,18 @@ public class LongFactorialGeneratorTest {
     }
 
     @Test
-    public void testIntFactorialGenerator(){
+    public void givenIntValueWillGenerateFactorial(){
+        //give int as input and this method will return fact of that value
         //act
         int factorial=longFactorialGenerator.factorialGenerator(5);
 
-        //
+        //assert
         assertEquals(120,factorial);
     }
 
     @Test
-    public void givenInputShouldCheckForPalindromeNumber(){
-
+    public void givenIntegerShouldCheckForLongValue(){
+        //this will check for long data type
         //act
         long factorial=longFactorialGenerator.getLongFactorial(20);
         //assert
@@ -38,8 +39,8 @@ public class LongFactorialGeneratorTest {
 
 
     @Test(expected = )
-    public void givenInputShouldReturnException(){
-
+    public void givenIntegerShouldReturnException(){
+    //this will throw an exception
         //act
         Exception exception=longFactorialGenerator.factorialGeneratorWithErrorBecauseOfIncompatibeDataType(13);
 

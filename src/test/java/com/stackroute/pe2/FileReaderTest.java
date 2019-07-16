@@ -1,13 +1,30 @@
 package com.stackroute.pe2;
 
+import org.junit.After;
+import org.junit.Before;
+
 import static org.junit.Assert.*;
 
 public class FileReaderTest {
+
+    private FileReader fileReader;
+
+    @Before
+    public void setUp(){
+        fileReader=new FileReader();
+    }
+
+    @After
+    public void tearUp(){
+        fileReader=null;
+    }
+
+
     public void testReadFileSuccessGivenFileNameAndExtensionShouldReturnByteArray() {
         String testString = "Hello. This is a test string";
         byte[] testByteArray = testString.getBytes();
         assertArrayEquals("testReadFileSuccessGivenFileNameAndExtensionShouldReturnByteArray: check readFile()",
-                testByteArray, readcontextOfFile.readFile("test", "txt"));
+                testByteArray, fileReader.readFile("test", "txt"));
     }
 
 
@@ -17,6 +34,6 @@ public class FileReaderTest {
      */
     @Test(expected = FileNotFoundException.class)
     public void testReadFileFailureGivenFileNameAndExtensionShouldReturnFileNotFoundException() {
-        readcontextOfFile.readFile("test1", "txt");
+        fileReader.readFile("test1", "txt");
     }
 }

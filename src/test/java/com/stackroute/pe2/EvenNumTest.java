@@ -19,8 +19,8 @@ public class EvenNumTest {
     }
 
     @Test
-    public void givenInputShouldReturnTrue(){
-
+    public void givenIntegerShouldReturnTrue(){
+        //this method has to return a number which is even else false
         //act
         boolean result=evenNum.isEven(120);
 
@@ -29,8 +29,8 @@ public class EvenNumTest {
     }
 
     @Test
-    public void givenInputShouldReturnfalse(){
-
+    public void givenIntegerShouldReturnfalse(){
+        //this will check for test case failure
         //act
         boolean result=evenNum.isEven(121);
 
@@ -39,7 +39,8 @@ public class EvenNumTest {
     }
 
     @Test
-    public void givenInputShouldReturnTrueIfItIsNotNum(){
+    public void givenCharacterShouldReturnTrueIfItIsNotNum(){
+        //this will work when we given character as input
         //act
         boolean result=evenNum.isNotNum('d');
 

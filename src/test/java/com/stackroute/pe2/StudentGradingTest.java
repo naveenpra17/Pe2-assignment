@@ -22,7 +22,7 @@ public class StudentGradingTest {
     }
 
     @Test
-    public void testWhetherTheUserIsGivingRightInput(){
+    public void testWhetherTheUserIsGivingRightInteger(){
         //act
 
 
@@ -33,7 +33,9 @@ public class StudentGradingTest {
     }
 
     @Test
-    public void givenInputShouldReturnAverage(){
+    public void givenIntegerArrayShouldReturnAverage(){
+
+        //this method is for finding avg
         //act
         int[] inputarr={10,20,30,40,50};
         int actualAverage=studentGrading.getAverage(inputarr);
@@ -42,7 +44,9 @@ public class StudentGradingTest {
     }
 
     @Test
-    public void givenInputShouldReturnMinimum(){
+    public void givenIntegerArrayShouldReturnMinimum(){
+
+        //this method is for finding minimum
         //act
         int[] intputarr={10,20,30,40,50};
         int actualMinimumGrades=studentGrading.getMinimum(intputarr);
@@ -52,7 +56,9 @@ public class StudentGradingTest {
     }
 
     @Test
-    public void givenInputShouldReturnMaximum(){
+    public void givenIntegerArrayShouldReturnMaximum(){
+
+        //this method is for maximum
         //act
         int[] inputarr={10,20,30,40};
         int actualMaximum=studentGrading.getMaximum(inputarr);
